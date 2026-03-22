@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: #020617;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+header h1 {
+    color: #FFD43B;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #e5e7eb;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #FFD43B;
+}
+
+/* SEÇÃO CONTATO */
+.contato {
+    padding: 80px 60px;
+    text-align: center;
+
+    background:
+        linear-gradient(135deg, #020617, #1e293b),
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,255,255,0.02) 0px,
+            rgba(255,255,255,0.02) 1px,
+            transparent 1px,
+            transparent 40px
+        );
+}
+
+.contato h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #FFD43B;
+}
+
+.contato p {
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+/* GRID DE CONTATOS */
+.contato-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* CARDS */
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #FFD43B;
+}
+
+.card p {
+    color: #cbd5f5;
+}
+
+/* LINKS */
+.card a {
+    text-decoration: none;
+    color: #FFD43B;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    color: #eab308;
+}
+
+/* HOVER INTERATIVO */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: #94a3b8;
+}

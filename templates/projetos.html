@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Projetos | Étmo Reis</title>
+    <link rel="stylesheet" href="/static/projetos.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Étmo Reis</h1>
+    <nav>
+        <a href="/">Início</a>
+        <a href="/projetos">Projetos</a>
+        <a href="/contatos">Contato</a>
+    </nav>
+</header>
+
+<section class="projetos">
+    <h2>Meus Projetos</h2>
+    <p>Descubra alguns dos meus trabalhos desenvolvidos com Python e tecnologias web.</p>
+<div class="scroll-container">
+    {% for projeto in projetos %}
+    <div class="card">
+        <div class="card-bg"></div> <!-- glow de fundo -->
+
+        <h3>{{ projeto.nome }}</h3>
+        <p>{{ projeto.descricao }}</p>
+        <span class="tech">{{ projeto.tecnologias }}</span>
+
+        <!-- BOTÃO DIRECIONANDO PARA O PROJETO -->
+        <a href="{{ projeto.link }}" target="_blank" class="btn">
+            Ver projeto
+        </a>
+    </div>
+    {% endfor %}
+</div>
+   
+</section>
+
+<footer>
+    <p>© 2026 - Étmo Reis</p>
+</footer>
+
+</body>
+</html>
