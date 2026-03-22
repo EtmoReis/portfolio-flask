@@ -1,13 +1,7 @@
 from flask import Flask, render_template
-
+import os
 
 app = Flask(__name__)
-
-
-#criar a 1@ Pagina do site 
-#route -- etmo.com/route 
-#funcao -- oque eu quero exibir  naquela pagina 
-#tamplate
 
 @app.route("/")
 def homepage():
@@ -16,6 +10,7 @@ def homepage():
 @app.route("/contatos")
 def contatos():
     return render_template("contatos.html")
+
 @app.route("/projetos")
 def projetos():
     lista_projetos = [
@@ -32,9 +27,9 @@ def projetos():
             "link": "https://github.com/EtmoReis/API-Python"
         }
     ]
-
     return render_template("projetos.html", projetos=lista_projetos)
-if __name__ == "__main__":
-    app.run(debug=True)
 
-    #servidor do heroku -deploy
+# Configuração para Render
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)

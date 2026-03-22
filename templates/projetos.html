@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Projetos | Étmo Reis</title>
-    <link rel="stylesheet" href="/static/projetos.css">
+
+    <!-- CORRIGIDO: usar url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='projetos.css') }}">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -21,23 +23,22 @@
 <section class="projetos">
     <h2>Meus Projetos</h2>
     <p>Descubra alguns dos meus trabalhos desenvolvidos com Python e tecnologias web.</p>
-<div class="scroll-container">
-    {% for projeto in projetos %}
-    <div class="card">
-        <div class="card-bg"></div> <!-- glow de fundo -->
 
-        <h3>{{ projeto.nome }}</h3>
-        <p>{{ projeto.descricao }}</p>
-        <span class="tech">{{ projeto.tecnologias }}</span>
+    <div class="scroll-container">
+        {% for projeto in projetos %}
+        <div class="card">
+            <div class="card-bg"></div>
 
-        <!-- BOTÃO DIRECIONANDO PARA O PROJETO -->
-        <a href="{{ projeto.link }}" target="_blank" class="btn">
-            Ver projeto
-        </a>
+            <h3>{{ projeto.nome }}</h3>
+            <p>{{ projeto.descricao }}</p>
+            <span class="tech">{{ projeto.tecnologias }}</span>
+
+            <a href="{{ projeto.link }}" target="_blank" class="btn">
+                Ver projeto
+            </a>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
-   
 </section>
 
 <footer>
