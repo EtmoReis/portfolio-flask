@@ -18,13 +18,13 @@ def projetos():
             "nome": "Sistema com Flask",
             "descricao": "Aplicação web com rotas dinâmicas, templates e estrutura MVC.",
             "tecnologias": "Python, Flask, HTML, CSS",
-            "link": "https://github.com/EtmoReis/Sistema-Flask"
+            "link": "https://github.com/EtmoReis/portfolio-flask"
         },
         {
-            "nome": "API em Python",
-            "descricao": "API REST para manipulação de dados com endpoints dinâmicos.",
+            "nome": "Mini Banco Python",
+            "descricao": "Aplicação console para gerenciamento de contas bancárias.",
             "tecnologias": "Python, Flask",
-            "link": "https://github.com/EtmoReis/API-Python"
+            "link": "https://github.com/EtmoReis/Sistema-Cadastral-Bancario-"
         }
     ]
     return render_template("projetos.html", projetos=lista_projetos)
